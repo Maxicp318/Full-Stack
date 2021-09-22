@@ -1,0 +1,215 @@
+    /*SEGUNDA SECCION PAG*/
+
+@import "../02-base/color";
+
+@import "../01-utilitles/mixins";
+
+%letras 
+{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: .013rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+main
+{
+    width:100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.container_secc_2
+{
+    display: flex;
+    align-items: center;
+    @include width-heigth (100%, 80vh);
+}
+
+.container_art_2
+{
+    width: 97.4%;
+    display: flex;
+    flex-direction: column;
+    border-left: 30px solid $color-naranja;
+}
+
+.titulo_2 
+{
+    width: 50%;
+    position: relative;
+    left: 20%;
+    padding-top: 1.5%;
+    margin: 0%; 
+    @include tipografia;
+    word-spacing: .45px;
+    letter-spacing: .55px;
+    color: $color-negro-claro;
+    .tituloabajo 
+    {
+        color: $color-naranja;
+    }
+} 
+
+
+.parrafo_2 
+{
+    position: relative;
+    left: 20%;
+    width: 56.5%;
+    padding: 2% 0% 1.5%;
+    @extend %letras;
+    color: $color-negro-claro;
+    p 
+    {
+        margin: 0%;
+    }
+}
+
+@media only screen and (max-width:1050px)
+{
+    .titulo_2
+    {
+        font-size: 2rem;
+    }
+        .parrafo_2
+        {
+            width:78%;
+        }
+}
+
+@media only screen and (max-width:660px)
+{
+    .container_secc_2
+    {
+        margin: 30% 0% 30%;
+    }
+}
+
+@media only screen and (max-width:400px)
+{
+    .container_secc_2
+    {
+        margin: 65% 0% 65%;
+    }
+}
+
+    /*TERCERA SECCION PAG */
+
+.fondo_dos_colores
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include width-heigth (100%, 50rem);
+    background: rgb(242,244,241);
+    background: linear-gradient(90deg, rgba(242,244,241,1) 70%, rgba(220,225,218,1) 70%);
+}
+
+.container_img_2
+{
+    background: transparent url(../../../Imagenes/Casa.png) 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-repeat: round;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;  
+    @include width-heigth(67%, 70%); 
+}
+
+.container_fondo_naranja
+{
+    display: flex;
+    flex-flow: column nowrap;  
+    justify-content: center;
+    align-items: center;
+    @include width-heigth(49%, 54%);
+    background-color: $color-naranja;
+}
+
+.container_art_3
+{
+    width: 80%;
+}
+
+.parrafo_titulo 
+{
+    margin: 0%;
+    color: $color-blanco;
+    @extend %letras;
+    font-size: 1rem;
+}
+
+.titulo_3 
+{
+    padding-bottom: 5%;  
+    @include tipografia;
+    font-size: 2rem;
+    letter-spacing: .55px;
+}
+
+.parrafo_3 
+{
+    margin: 0%;
+    color: $color-blanco;
+    @extend %letras;
+}
+
+.boton_next
+{
+    position: absolute;
+    top: 82%;
+    right: 12%;
+    @include width-heigth(7%, 11%);
+}
+
+.boton_previous
+{
+    position: absolute;
+    top: 82%;
+    left: 72%;
+    @include width-heigth(7%, 11%);
+}
+
+@media only screen and (max-width:770px)
+{
+    .boton_previous
+    {
+        width: 10%;
+        left: 65%;
+    }
+    .boton_next
+    {
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width:730px)
+{
+    .container_img_2
+    {
+        @include width-heigth(100%, 90%);
+    }
+}
+
+@media only screen and (max-width:420px)
+{
+    .container_fondo_naranja
+    {
+        width: 56%;
+    }
+        .titulo_3
+        {
+            padding: 0%;
+            font-family: 1.7rem;
+        }
+            .boton_next
+            {
+                top:89%;
+            }
+            .boton_previous
+            {
+                top: 89%;         
+            }
+}

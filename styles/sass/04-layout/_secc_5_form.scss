@@ -1,0 +1,105 @@
+@import "../02-base/color";
+
+@import "../01-utilitles/mixins";
+
+%letras 
+{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: .013rem;
+    letter-spacing: .015rem;
+    font-weight: 500;
+}
+
+.container_5
+{
+    @include width-heigth;
+    display: flex;
+    background: rgb(242,244,241);
+    background: linear-gradient(90deg, rgba(242,244,241,1) 70%, rgba(220,225,218,1) 70%);
+    justify-content: space-evenly;
+}
+
+.img_5
+{
+    align-self: center;
+    @include width-heigth(45%, 50%);
+    order: 1;
+}
+
+.container_form
+{
+    @include width-heigth(35%, 70%);
+    align-self: center;
+}
+
+.titulo_5
+{
+    margin: 0%;
+    font-family:'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    word-spacing: .45px;
+    letter-spacing: .55px;
+    color: $color-negro-claro;
+    .tituloabajootrocolor 
+    {
+        margin: 0% 0% 15%;
+        color: $color-naranja;
+    }
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+*label
+{
+    @extend %letras;
+    color: $color-negro-claro2;    
+}
+
+.input
+{
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid grey;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 0rem;
+}
+
+.boton_2 
+{
+    @include width-heigth(30%, 15%);
+    margin-top: 10%;
+    background: $color-naranja;
+    border-radius: 25px 25px;
+    padding: 2% 5.5%;
+    border: 0px;
+    color: $color-blanco;
+    @extend %letras;
+    &:hover 
+    {
+        background: #bf6e39;
+    }    
+} 
+
+@media only screen and (max-width:770px)
+{
+    .titulo_5
+    {
+        font-size: 1.7rem;
+    }
+        .tituloabajootrocolor
+        {
+            margin: 0%;
+        }
+    .boton_2
+    {
+        width:50%;
+    }    
+}

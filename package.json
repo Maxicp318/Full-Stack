@@ -1,0 +1,19 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=5050 --verbose",
+    "sass-watch-dev": "sass --watch -c --style=expanded styles/sass:Styles/css",
+    "sass-compile-prod": "sass --style=compressed styles/sass/scss:dist/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.1",
+    "live-server": "^1.2.1",
+    "sass": "^1.42.0"
+  }
+}
