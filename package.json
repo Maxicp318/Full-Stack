@@ -6,7 +6,7 @@
   "scripts": {
     "start": "live-server --port=5050 --verbose",
     "sass-watch-dev": "sass --watch -c --style=expanded styles/sass:Styles/css",
-    "sass-compile-prod": "sass --style=compressed styles/sass/scss:dist/css"
+    "sass-compile-prod": "sass --style=compressed styles/sass:styles/css"
   },
   "keywords": [],
   "author": "",
